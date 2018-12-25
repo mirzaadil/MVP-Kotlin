@@ -15,12 +15,14 @@ import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
 
+/**
+ * @author Mirza Adil
+ * Base Activity
+ */
+
+
 abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
 
-    /**
-     * @author Mirza Adil
-     * Base Activity
-     */
 
     protected var mLayoutStatusView: MultipleStatusView? = null
 

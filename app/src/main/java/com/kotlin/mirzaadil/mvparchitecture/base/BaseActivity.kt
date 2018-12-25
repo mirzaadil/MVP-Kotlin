@@ -18,7 +18,8 @@ import pub.devrel.easypermissions.EasyPermissions
 abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
 
     /**
-     * Multiple View
+     * @author Mirza Adil
+     * Base Activity
      */
 
     protected var mLayoutStatusView: MultipleStatusView? = null

@@ -17,13 +17,11 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation
 import java.security.MessageDigest
 
 /**
- * Created by xuhao on 2017/11/29.
+ * @author Mirza Adil
  * desc:
- * 1.永远不要把transform()传给你的原始resource或原始Bitmap给recycle()了，更不要放回BitmapPool，因为这些都自动完成了。值得注意的是，任何从BitmapPool取出的用于自定义图片变换的辅助Bitmap，如果不经过transform()方法返回，就必须主动放回BitmapPool或者调用recycle()回收。
- * 2.如果你从BitmapPool拿出多个Bitmap或不使用你从BitmapPool拿出的一个Bitmap，一定要返回extras给BitmapPool。
- * 3.如果你的图片处理没有替换原始resource(例如由于一张图片已经匹配了你想要的尺寸，你需要提前返回), transform()`方法就返回原始resource或原始Bitmap。
- *
- *
+ * 1. Never pass transform() to your original resource or original Bitmap to recycle(), and don't put it back in BitmapPool, as these are done automatically. It is worth noting that any auxiliary Bitmap for custom image transformations taken from BitmapPool must be returned to BitmapPool or recycled () by recycling if it is not returned by the transform() method.
+ * 2. If you take multiple Bitmaps from BitmapPool or don't use a Bitmap you took from BitmapPool, be sure to return extras to BitmapPool.
+ * 3. If your image processing does not replace the original resource (for example, because an image already matches the size you want, you need to return earlier), the transform()` method returns the original resource or the original Bitmap.
  */
 
 class GlideRoundTransform @JvmOverloads constructor(dp: Int = 4) : BitmapTransformation() {

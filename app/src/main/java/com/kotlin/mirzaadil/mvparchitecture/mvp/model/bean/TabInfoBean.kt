@@ -1,8 +1,8 @@
 package com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 热门的 tabInfo
+ * @author Mirza Adil
+ * desc:  tabInfo
  */
 
 data class TabInfoBean(val tabInfo: TabInfo) {

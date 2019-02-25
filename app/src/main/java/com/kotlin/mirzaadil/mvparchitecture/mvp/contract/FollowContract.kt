@@ -5,14 +5,14 @@ import com.kotlin.mirzaadil.mvparchitecture.base.IPresenter
 import com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean.HomeBean
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 契约类
+ * @author Mirza Adil
+ * desc: Contract class
  */
 interface FollowContract {
 
     interface View : IBaseView {
         /**
-         * 设置关注信息数据
+         * Set attention information data
          */
         fun setFollowInfo(issue: HomeBean.Issue)
 
@@ -22,12 +22,12 @@ interface FollowContract {
 
     interface Presenter : IPresenter<View> {
         /**
-         * 获取List
+         * Get List
          */
         fun requestFollowList()
 
         /**
-         * 加载更多
+         * load more
          */
         fun loadMoreData()
     }

@@ -7,13 +7,13 @@ import com.kotlin.mirzaadil.mvparchitecture.rx.scheduler.SchedulerUtils
 import io.reactivex.Observable
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 热门 Model
+ * @author Mirza Adil
+ * desc: Tab Model
  */
 class HotTabModel {
 
     /**
-     * 获取 TabInfo
+     * TabInfo
      */
     fun getTabInfo(): Observable<TabInfoBean> {
 

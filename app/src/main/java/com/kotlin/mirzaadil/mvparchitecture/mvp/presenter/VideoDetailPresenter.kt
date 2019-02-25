@@ -13,7 +13,7 @@ import com.kotlin.mirzaadil.mvparchitecture.utils.DisplayManager
 import com.kotlin.mirzaadil.mvparchitecture.utils.NetworkUtil
 
 /**
- * Created by xuhao on 2017/11/25.
+ * @author Mirza Adil
  * desc:
  */
 class VideoDetailPresenter : BasePresenter<VideoDetailContract.View>(), VideoDetailContract.Presenter {
@@ -24,17 +24,17 @@ class VideoDetailPresenter : BasePresenter<VideoDetailContract.View>(), VideoDet
     }
 
     /**
-     * 加载视频相关的数据
+     * Load video related data
      */
     override fun loadVideoInfo(itemInfo: HomeBean.Issue.Item) {
 
         val playInfo = itemInfo.data?.playInfo
 
         val netType = NetworkUtil.isWifi(MyApplication.context)
-        // 检测是否绑定 View
+        // Check if binding View
         checkViewAttached()
         if (playInfo!!.size > 1) {
-            // 当前网络是 Wifi环境下选择高清的视频
+            // The current network is a high-definition video in the Wifi environment.
             if (netType) {
                 for (i in playInfo) {
                     if (i.type == "high") {
@@ -44,15 +44,15 @@ class VideoDetailPresenter : BasePresenter<VideoDetailContract.View>(), VideoDet
                     }
                 }
             } else {
-                //否则就选标清的视频
+                //Otherwise, choose the standard video.
                 for (i in playInfo) {
                     if (i.type == "normal") {
                         val playUrl = i.url
                         mRootView?.setVideo(playUrl)
-                        //Todo 待完善
+                        //Todo To be perfected
                         (mRootView as Activity).showToast(
-                            "本次消耗${(mRootView as Activity)
-                                .dataFormat(i.urlList[0].size)}流量"
+                            "This consumption${(mRootView as Activity)
+                                .dataFormat(i.urlList[0].size)}flow"
                         )
                         break
                     }
@@ -62,7 +62,7 @@ class VideoDetailPresenter : BasePresenter<VideoDetailContract.View>(), VideoDet
             mRootView?.setVideo(itemInfo.data.playUrl)
         }
 
-        //设置背景
+        //Set background
         val backgroundUrl =
             itemInfo.data.cover.blurred + "/thumbnail/${DisplayManager.getScreenHeight()!! - DisplayManager.dip2px(250f)!!}x${DisplayManager.getScreenWidth()}"
         backgroundUrl.let { mRootView?.setBackground(it) }
@@ -74,7 +74,7 @@ class VideoDetailPresenter : BasePresenter<VideoDetailContract.View>(), VideoDet
 
 
     /**
-     * 请求相关的视频数据
+     * Request related video data
      */
     override fun requestRelatedVideo(id: Long) {
         mRootView?.showLoading()

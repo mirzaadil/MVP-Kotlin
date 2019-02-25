@@ -9,8 +9,9 @@ import java.net.UnknownHostException
 import java.text.ParseException
 
 /**
- * Created by xuhao on 2017/12/5.
- * desc: 异常处理类
+ * @author Mirza Adil
+ * desc: Exception handling class
+
  */
 
 class ExceptionHandle {
@@ -18,43 +19,43 @@ class ExceptionHandle {
 
     companion object {
         var errorCode = ErrorStatus.UNKNOWN_ERROR
-        var errorMsg = "请求失败，请稍后重试"
+        var errorMsg = "Request failed, please try again later"
 
         fun handleException(e: Throwable): String {
             e.printStackTrace()
-            if (e is SocketTimeoutException) {//网络超时
-                Logger.e("TAG", "网络连接异常: " + e.message)
-                errorMsg = "网络连接异常"
+            if (e is SocketTimeoutException) {//network timeout
+                Logger.e("TAG", "Abnormal network connection: " + e.message)
+                errorMsg = "Abnormal network connection"
                 errorCode = ErrorStatus.NETWORK_ERROR
-            } else if (e is ConnectException) { //均视为网络错误
-                Logger.e("TAG", "网络连接异常: " + e.message)
-                errorMsg = "网络连接异常"
+            } else if (e is ConnectException) { //Are considered network errors
+                Logger.e("TAG", "Abnormal network connection: " + e.message)
+                errorMsg = "Abnormal network connection"
                 errorCode = ErrorStatus.NETWORK_ERROR
             } else if (e is JsonParseException
                 || e is JSONException
                 || e is ParseException
-            ) {   //均视为解析错误
-                Logger.e("TAG", "数据解析异常: " + e.message)
-                errorMsg = "数据解析异常"
+            ) {   //Are considered parsing errors
+                Logger.e("TAG", "Abnormal network connection: " + e.message)
+                errorMsg = "Abnormal network connection"
                 errorCode = ErrorStatus.SERVER_ERROR
-            } else if (e is ApiException) {//服务器返回的错误信息
+            } else if (e is ApiException) {//Error message returned by the server
                 errorMsg = e.message.toString()
                 errorCode = ErrorStatus.SERVER_ERROR
             } else if (e is UnknownHostException) {
-                Logger.e("TAG", "网络连接异常: " + e.message)
-                errorMsg = "网络连接异常"
+                Logger.e("TAG", "Abnormal network connection: " + e.message)
+                errorMsg = "Abnormal network connection"
                 errorCode = ErrorStatus.NETWORK_ERROR
             } else if (e is IllegalArgumentException) {
-                errorMsg = "参数错误"
+                errorMsg = "Parameter error"
                 errorCode = ErrorStatus.SERVER_ERROR
-            } else {//未知错误
+            } else {//unknown mistake
                 try {
-                    Logger.e("TAG", "错误: " + e.message)
+                    Logger.e("TAG", "error: " + e.message)
                 } catch (e1: Exception) {
-                    Logger.e("TAG", "未知错误Debug调试 ")
+                    Logger.e("TAG", "Unknown error Debug debugging")
                 }
 
-                errorMsg = "未知错误，可能抛锚了吧~"
+                errorMsg = "Unknown error, may be anchored~"
                 errorCode = ErrorStatus.UNKNOWN_ERROR
             }
             return errorMsg

@@ -6,8 +6,8 @@ import com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean.HomeBean
 
 
 /**
- * Created by xuhao on 2017/11/8.
- * 契约类
+ * @author Mirza Adil
+ * Contract class
  */
 
 interface HomeContract {

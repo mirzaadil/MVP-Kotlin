@@ -33,7 +33,7 @@ class HomePresenter : BasePresenter<HomeContract.View>(), HomeContract.Presenter
         checkViewAttached()
         mRootView?.showLoading()
         val disposable = homeModel.requestHomeData(num)
-            .flatMap({ homeBean ->
+            .flatMap { homeBean ->
                 //Filter out Banner2 (including ads, etc.), and view the interface analysis.
                 val bannerItemList = homeBean.issueList[0].itemList
                 bannerItemList.filter { item ->
@@ -45,7 +45,7 @@ class HomePresenter : BasePresenter<HomeContract.View>(), HomeContract.Presenter
                 bannerHomeBean = homeBean //Record the first page as the banner data
                 //Request next page data according to nextPageUrl
                 homeModel.loadMoreData(homeBean.nextPageUrl)
-            })
+            }
             .subscribe({ homeBean ->
                 mRootView?.apply {
                     dismissLoading()

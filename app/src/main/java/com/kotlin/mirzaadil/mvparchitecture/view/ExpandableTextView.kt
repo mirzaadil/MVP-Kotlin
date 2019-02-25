@@ -18,8 +18,8 @@ import com.kotlin.mirzaadil.mvparchitecture.R
 
 
 /**
- * 可折叠，展开的TextView
- * Created by xuhao on 2017/11/27
+ * Collapsible, unfolded TextView
+ * @author Mirza Adil
  */
 class ExpandableTextView : LinearLayout, View.OnClickListener {
 
@@ -28,15 +28,19 @@ class ExpandableTextView : LinearLayout, View.OnClickListener {
 
     private var mRelayout: Boolean = false
 
-    private var mCollapsed = true  // 用来标记处于折叠还是展开的状态，Show short version as default.默认显示为折叠状态
+    private var mCollapsed = true  // Used to mark the state of being folded or unfolded, Show short version as default. The default display is collapsed.
 
-    private var mExpandDrawable: Drawable? = null   // 折叠时候的显示图标▼
+    private var mExpandDrawable: Drawable? = null   // Display icon when folding
 
-    private var mCollapseDrawable: Drawable? = null // 展开时候的显示图标▲
 
-    private var mMaxCollapsedLines: Int = 0     // 设置最多的折叠行数
+    private var mCollapseDrawable: Drawable? = null // Display icon when expanding ▲
 
-    private var mTextHeightWithMaxLines: Int = 0    // TextView的最大高度
+
+    private var mMaxCollapsedLines: Int = 0     // Set the maximum number of fold lines
+
+
+    private var mTextHeightWithMaxLines: Int = 0    // Maximum height of the TextView
+
 
     private var mMarginBetweenTxtAndBottom: Int = 0
     private var mCollapsedHeight: Int = 0
@@ -94,7 +98,7 @@ class ExpandableTextView : LinearLayout, View.OnClickListener {
 
 
     /**
-     * 该组合控件只支持垂直布局
+     * This combination control only supports vertical layout
      *
      * @param orientation
      */
@@ -162,7 +166,7 @@ class ExpandableTextView : LinearLayout, View.OnClickListener {
     }
 
     /**
-     * 点击展开/折叠
+     * Click to expand/collapse
      */
     override fun onClick(view: View) {
         if (mButton!!.visibility != View.VISIBLE) {
@@ -249,7 +253,7 @@ class ExpandableTextView : LinearLayout, View.OnClickListener {
         private val DEFAULT_ANIM_ALPHA_START = 0.7f
 
         /**
-         * 获取TextView真正的高度
+         * Get the true height of the TextView
          *
          * @param textView
          * @return

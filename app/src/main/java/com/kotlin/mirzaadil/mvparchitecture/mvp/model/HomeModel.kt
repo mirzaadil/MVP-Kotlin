@@ -7,8 +7,8 @@ import com.kotlin.mirzaadil.mvparchitecture.rx.scheduler.SchedulerUtils
 import io.reactivex.Observable
 
 /**
- * Created by xuhao on 2017/11/21.
- * desc: 首页精选 model
+ * 2@author Mirza Adil
+ * desc: Home model
  */
 
 class HomeModel{

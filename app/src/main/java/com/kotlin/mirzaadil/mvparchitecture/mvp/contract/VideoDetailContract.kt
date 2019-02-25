@@ -6,35 +6,35 @@ import com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean.HomeBean
 
 
 /**
- * Created by xuhao on 2017/11/25.
- * desc: 视频详情契约类
+ * @author Mirza Adil
+ * desc: Video details contract class
  */
 interface VideoDetailContract {
 
     interface View : IBaseView {
 
         /**
-         * 设置视频播放源
+         * Set the video source
          */
         fun setVideo(url: String)
 
         /**
-         * 设置视频信息
+         * Set up video information
          */
         fun setVideoInfo(itemInfo: HomeBean.Issue.Item)
 
         /**
-         * 设置背景
+         * Set background
          */
         fun setBackground(url: String)
 
         /**
-         * 设置最新相关视频
+         * Set up the latest related videos
          */
         fun setRecentRelatedVideo(itemList: ArrayList<HomeBean.Issue.Item>)
 
         /**
-         * 设置错误信息
+         * Set error message
          */
         fun setErrorMsg(errorMsg: String)
 
@@ -44,12 +44,12 @@ interface VideoDetailContract {
     interface Presenter : IPresenter<View> {
 
         /**
-         * 加载视频信息
+         * Load video information
          */
         fun loadVideoInfo(itemInfo: HomeBean.Issue.Item)
 
         /**
-         * 请求相关的视频数据
+         * Request related video data
          */
         fun requestRelatedVideo(id: Long)
 

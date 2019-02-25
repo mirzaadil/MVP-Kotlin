@@ -7,13 +7,13 @@ import com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean.HomeBean
 
 /**
  * Created by xuhao on 2017/11/30.
- * desc: 契约类
+ * desc: Rank Contract Class
  */
 interface RankContract {
 
     interface View: IBaseView {
         /**
-         * 设置排行榜的数据
+         * Set data for leaderboards
          */
         fun setRankList(itemList: ArrayList<HomeBean.Issue.Item>)
 
@@ -23,7 +23,7 @@ interface RankContract {
 
     interface Presenter: IPresenter<View> {
         /**
-         * 获取 TabInfo
+         * Get TabInfo
          */
         fun requestRankList(apiUrl:String)
     }

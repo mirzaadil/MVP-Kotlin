@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.DisplayMetrics
 
 /**
- * Created by xuhao on 2017/11/27.
+ * @author Mirza Adil
  * desc:
  */
 
@@ -29,7 +29,7 @@ object DisplayManager {
     }
 
 
-    //UI图的大小
+    //UI map size
     private const val STANDARD_WIDTH = 1080
     private const val STANDARD_HEIGHT = 1920
 
@@ -44,7 +44,7 @@ object DisplayManager {
 
 
     /**
-     * 传入UI图中问题的高度，单位像素
+     * The height of the problem passed into the UI map, unit pixels
      * @param size
      * @return
      */
@@ -53,21 +53,21 @@ object DisplayManager {
     }
 
     /**
-     * 输入UI图的尺寸，输出实际的px
+     * Enter the size of the UI map and output the actual px
      *
-     * @param px ui图中的大小
+     * @param px Size in ui diagram
      * @return
      */
     fun getRealWidth(px: Int): Int? {
-        //ui图的宽度
+
         return getRealWidth(px, STANDARD_WIDTH.toFloat())
     }
 
     /**
-     * 输入UI图的尺寸，输出实际的px,第二个参数是父布局
+     * Enter the size of the UI map, output the actual px, the second parameter is the parent layout
      *
-     * @param px          ui图中的大小
-     * @param parentWidth 父view在ui图中的高度
+     * @param px
+     * @param parentWidth
      * @return
      */
     fun getRealWidth(px: Int, parentWidth: Float): Int? {
@@ -75,21 +75,21 @@ object DisplayManager {
     }
 
     /**
-     * 输入UI图的尺寸，输出实际的px
+     * Enter the size of the UI map and output the actual px
      *
-     * @param px ui图中的大小
+     * @param px
      * @return
      */
     fun getRealHeight(px: Int): Int? {
-        //ui图的宽度
+
         return getRealHeight(px, STANDARD_HEIGHT.toFloat())
     }
 
     /**
-     * 输入UI图的尺寸，输出实际的px,第二个参数是父布局
+     * Enter the size of the UI map, output the actual px, the second parameter is the parent layout
      *
-     * @param px           ui图中的大小
-     * @param parentHeight 父view在ui图中的高度
+     * @param px
+     * @param parentHeight
      * @return
      */
     fun getRealHeight(px: Int, parentHeight: Float): Int? {
@@ -97,7 +97,7 @@ object DisplayManager {
     }
 
     /**
-     * dip转px
+     * dip px
      * @param dipValue
      * @return int
      */

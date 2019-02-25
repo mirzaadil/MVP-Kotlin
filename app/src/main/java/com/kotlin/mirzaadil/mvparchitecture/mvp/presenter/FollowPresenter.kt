@@ -7,8 +7,8 @@ import com.kotlin.mirzaadil.mvparchitecture.net.exception.ExceptionHandle
 
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 获取 TabInfo Presenter
+ * @author Mirza Adil
+ * desc: TabInfo Presenter
  */
 class FollowPresenter : BasePresenter<FollowContract.View>(), FollowContract.Presenter {
 
@@ -17,7 +17,7 @@ class FollowPresenter : BasePresenter<FollowContract.View>(), FollowContract.Pre
     private var nextPageUrl:String?=null
 
     /**
-     *  请求关注数据
+     *  Request attention data
      */
     override fun requestFollowList() {
         checkViewAttached()
@@ -31,7 +31,7 @@ class FollowPresenter : BasePresenter<FollowContract.View>(), FollowContract.Pre
                     }
                 }, { throwable ->
                     mRootView?.apply {
-                        //处理异常
+                        //Handling exceptions
                         showError(ExceptionHandle.handleException(throwable),ExceptionHandle.errorCode)
                     }
                 })
@@ -39,7 +39,7 @@ class FollowPresenter : BasePresenter<FollowContract.View>(), FollowContract.Pre
     }
 
     /**
-     * 加载更多
+     * load more
      */
     override fun loadMoreData(){
         val disposable = nextPageUrl?.let {

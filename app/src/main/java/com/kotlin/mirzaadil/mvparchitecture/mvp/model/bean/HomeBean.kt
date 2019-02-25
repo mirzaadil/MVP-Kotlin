@@ -3,8 +3,8 @@ package com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean
 import java.io.Serializable
 
 /**
-* Created by  on 2017/11/21.
-*
+* @author Mirza Adil
+* @description Home Bean
 */
 data class HomeBean(val issueList: ArrayList<Issue>, val nextPageUrl: String, val nextPublishTime: Long, val newestIssueType: String, val dialog: Any){
 

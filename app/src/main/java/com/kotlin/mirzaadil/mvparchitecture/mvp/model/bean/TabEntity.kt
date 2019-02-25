@@ -5,7 +5,7 @@ import com.flyco.tablayout.listener.CustomTabEntity
 
 
 /**
- * Created by xuhao on 2017/11/8.
+ * @author Mirza Adil
  */
 class TabEntity(var title: String, private var selectedIcon: Int, private var unSelectedIcon: Int) : CustomTabEntity {
 

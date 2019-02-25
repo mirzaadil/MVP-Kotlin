@@ -1,7 +1,7 @@
 package com.kotlin.mirzaadil.mvparchitecture.rx.scheduler
 
 /**
- * Created by xuhao on 2017/11/17.
+ * @author Mirza Adil
  * desc:
  */
 

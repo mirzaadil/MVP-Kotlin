@@ -3,7 +3,10 @@ package com.kotlin.mirzaadil.mvparchitecture.base
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
-
+/**
+ * @author Mirza Adil
+ * Generic BasePresenter
+ */
 open class BasePresenter<T : IBaseView> : IPresenter<T> {
     var mRootView: T? = null
         private set

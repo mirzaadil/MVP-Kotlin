@@ -7,13 +7,13 @@ import com.kotlin.mirzaadil.mvparchitecture.rx.scheduler.SchedulerUtils
 import io.reactivex.Observable
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 关注Model
+ * @author Mirza Adil
+ * desc: Follow Model
  */
 class FollowModel {
 
     /**
-     * 获取关注信息
+     * Get attention information
      */
     fun requestFollowList(): Observable<HomeBean.Issue> {
 
@@ -22,7 +22,7 @@ class FollowModel {
     }
 
     /**
-     * 加载更多
+     * load more
      */
     fun loadMoreData(url:String):Observable<HomeBean.Issue>{
         return RetrofitManager.service.getIssueData(url)

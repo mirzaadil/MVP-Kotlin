@@ -7,8 +7,8 @@ import com.kotlin.mirzaadil.mvparchitecture.net.exception.ExceptionHandle
 
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 获取 TabInfo Presenter
+ *@author Mirza Adil
+ * desc:TabInfo Presenter
  */
 class RankPresenter : BasePresenter<RankContract.View>(), RankContract.Presenter {
 
@@ -16,7 +16,7 @@ class RankPresenter : BasePresenter<RankContract.View>(), RankContract.Presenter
 
 
     /**
-     *  请求排行榜数据
+     *  Request leaderboard data
      */
     override fun requestRankList(apiUrl: String) {
         checkViewAttached()
@@ -29,7 +29,7 @@ class RankPresenter : BasePresenter<RankContract.View>(), RankContract.Presenter
                     }
                 }, { throwable ->
                     mRootView?.apply {
-                        //处理异常
+                        //Exception handling
                         showError(ExceptionHandle.handleException(throwable),ExceptionHandle.errorCode)
                     }
                 })

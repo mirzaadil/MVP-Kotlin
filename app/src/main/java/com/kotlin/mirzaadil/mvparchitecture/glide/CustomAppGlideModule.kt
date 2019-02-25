@@ -36,10 +36,10 @@ class CustomAppGlideModule : AppGlideModule() {
 
 
     /**
-     * 清单解析的开启
+     * List resolution is turned on
      *
      *
-     * 这里不开启，避免添加相同的modules两次
+     * Not open here, avoid adding the same modules twice
      *
      * @return
      */
@@ -49,7 +49,7 @@ class CustomAppGlideModule : AppGlideModule() {
 
     /**
      *
-     * 为App注册一个自定义的String类型的BaseGlideUrlLoader
+     * Register a custom String type BaseGlideUrlLoader for the App
      * @param context
      * @param glide
      * @param registry

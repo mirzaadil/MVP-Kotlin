@@ -15,6 +15,11 @@ import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
 
+/**
+ * @author Mirza Adil
+ * Base Fragment
+ */
+
 abstract class BaseFragment : Fragment(), EasyPermissions.PermissionCallbacks {
 
     /**
@@ -37,7 +42,7 @@ abstract class BaseFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     protected var mLayoutStatusView: MultipleStatusView? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-            return inflater.inflate(getLayoutId(), null)
+        return inflater.inflate(getLayoutId(), null)
     }
 
 

@@ -6,14 +6,14 @@ import com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean.HomeBean
 
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 分类详情契约类
+ * @author Mirza Adil
+ * desc: Classification details contract class
  */
 interface CategoryDetailContract {
 
     interface View: IBaseView {
         /**
-         *  设置列表数据
+         *  Set list data
          */
         fun setCateDetailList(itemList:ArrayList<HomeBean.Issue.Item>)
 

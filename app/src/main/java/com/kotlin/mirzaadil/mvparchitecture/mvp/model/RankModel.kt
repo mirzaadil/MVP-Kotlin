@@ -7,13 +7,13 @@ import com.kotlin.mirzaadil.mvparchitecture.rx.scheduler.SchedulerUtils
 import io.reactivex.Observable
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 排行榜 Model
+ * @author Mirza adil
+ * desc: Rank Model
  */
 class RankModel {
 
     /**
-     * 获取排行榜
+     * Get the leaderboard
      */
     fun requestRankList(apiUrl:String): Observable<HomeBean.Issue> {
 

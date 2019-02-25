@@ -2,36 +2,36 @@ package  com.kotlin.mirzaadil.mvparchitecture.net.exception
 
 
 /**
- * Created by xuhao on 2017/12/5.
+ * @author Mirza Adil
  * desc:
  */
 object ErrorStatus {
     /**
-     * 响应成功
+     * Successful response
      */
     @JvmField
     val SUCCESS = 0
 
     /**
-     * 未知错误
+     * unknown mistake
      */
     @JvmField
     val UNKNOWN_ERROR = 1002
 
     /**
-     * 服务器内部错误
+     * Server internal error
      */
     @JvmField
     val SERVER_ERROR = 1003
 
     /**
-     * 网络连接超时
+     * Network connection timeout
      */
     @JvmField
     val NETWORK_ERROR = 1004
 
     /**
-     * API解析异常（或者第三方数据结构更改）等其他异常
+     * Other exceptions such as API parsing exceptions (or third-party data structure changes)
      */
     @JvmField
     val API_ERROR = 1005

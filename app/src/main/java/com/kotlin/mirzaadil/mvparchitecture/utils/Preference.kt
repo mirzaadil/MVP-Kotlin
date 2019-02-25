@@ -9,8 +9,8 @@ import java.io.*
 import kotlin.reflect.KProperty
 
 /**
- * Created by xuhao on 2017/12/11.
- * desc:kotlin委托属性+SharedPreference实例
+ * @author Mirza Adil
+ * desc:Kotlin delegate attribute +SharedPreference instance
  */
 class Preference<T>(val name:String, private val default:T) {
 
@@ -22,14 +22,14 @@ class Preference<T>(val name:String, private val default:T) {
             MyApplication.context.getSharedPreferences(file_name, Context.MODE_PRIVATE)
         }
         /**
-         * 删除全部数据
+         * Delete all data
          */
         fun clearPreference(){
             prefs.edit().clear().apply()
         }
 
         /**
-         * 根据key删除存储数据
+         * Delete stored data according to key
          */
         fun clearPreference(key : String){
             prefs.edit().remove(key).apply()
@@ -75,8 +75,7 @@ class Preference<T>(val name:String, private val default:T) {
 
 
     /**
-     * 序列化对象
-
+     * Serialized object
      * @param person
      * *
      * @return
@@ -97,7 +96,7 @@ class Preference<T>(val name:String, private val default:T) {
     }
 
     /**
-     * 反序列化对象
+     * Deserialized object
 
      * @param str
      * *
@@ -123,7 +122,7 @@ class Preference<T>(val name:String, private val default:T) {
 
 
     /**
-     * 查询某个key是否已经存在
+     * Query if a key already exists
      *
      * @param key
      * @return
@@ -133,7 +132,7 @@ class Preference<T>(val name:String, private val default:T) {
     }
 
     /**
-     * 返回所有的键值对
+     * Return all key-value pairs
      *
      * @param context
      * @return

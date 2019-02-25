@@ -1,7 +1,7 @@
 package  com.kotlin.mirzaadil.mvparchitecture.net.exception
 
 /**
- * Created by xuhao on 2017/12/5.
+ * @author Mirza Adil
  * desc:
  */
 class ApiException : RuntimeException {

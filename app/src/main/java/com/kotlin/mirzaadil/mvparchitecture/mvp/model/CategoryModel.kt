@@ -7,14 +7,14 @@ import com.kotlin.mirzaadil.mvparchitecture.rx.scheduler.SchedulerUtils
 import io.reactivex.Observable
 
 /**
- * Created by xuhao on 2017/11/29.
- * desc: 分类数据模型
+ * @author Mirza Adil
+ * desc: Categorical data model
  */
 class CategoryModel {
 
 
     /**
-     * 获取分类信息
+     * Get classified information
      */
     fun getCategoryData(): Observable<ArrayList<CategoryBean>> {
         return RetrofitManager.service.getCategory()

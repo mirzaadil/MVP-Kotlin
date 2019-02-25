@@ -7,8 +7,8 @@ import com.kotlin.mirzaadil.mvparchitecture.net.exception.ExceptionHandle
 
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 获取 TabInfo Presenter
+ * @author Mirza Adil
+ * desc:TabInfo Presenter
  */
 class HotTabPresenter: BasePresenter<HotTabContract.View>(),HotTabContract.Presenter {
 
@@ -24,7 +24,7 @@ class HotTabPresenter: BasePresenter<HotTabContract.View>(),HotTabContract.Prese
                     mRootView?.setTabInfo(tabInfo)
                 },{
                     throwable->
-                    //处理异常
+                    //Exception handling
                     mRootView?.showError(ExceptionHandle.handleException(throwable), ExceptionHandle.errorCode)
                 })
         addSubscription(disposable)

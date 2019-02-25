@@ -2,7 +2,7 @@ package  com.kotlin.mirzaadil.mvparchitecture.glide
 
 
 /**
- * Created by xuhao on 2017/11/27.
+ * @author Mirza Adil
  * desc:
  */
 object ImageLoaderUtils {

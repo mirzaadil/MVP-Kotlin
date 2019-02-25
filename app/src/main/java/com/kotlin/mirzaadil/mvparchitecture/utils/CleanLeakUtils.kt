@@ -8,7 +8,7 @@ import com.orhanobut.logger.Logger
 import java.lang.reflect.Field
 
 /**
- * Created by xuhao on 2017/12/13.
+ * @author Mirza Adil
  * desc:
  */
 
@@ -33,10 +33,11 @@ object CleanLeakUtils {
                 filedObject = filed.get(inputMethodManager)
                 if (filedObject != null && filedObject is View) {
                     val fileView = filedObject as View?
-                    if (fileView!!.context === destContext) { // 被InputMethodManager持有引用的context是想要目标销毁的
-                        filed.set(inputMethodManager, null) // 置空，破坏掉path to gc节点
+                    if (fileView!!.context === destContext) { // The context referenced by the InputMethodManager is intended to be destroyed by the target.
+                        filed.set(inputMethodManager, null) //Empty, destroy path to gc node
+
                     } else {
-                        break// 不是想要目标销毁的，即为又进了另一层界面了，不要处理，避免影响原逻辑,也就不用继续for循环了
+                        break// If you don't want the target to be destroyed, you have to enter another layer of interface. Don't deal with it, avoid affecting the original logic, and you don't have to continue for loop.
                     }
                 }
             } catch (t: Throwable) {

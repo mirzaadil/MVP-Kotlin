@@ -5,6 +5,10 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
+/**
+ * @author Mirza Adil
+ * Base FragmentPagerAdapter
+ */
 
 class BaseFragmentAdapter : FragmentPagerAdapter {
 
@@ -21,7 +25,7 @@ class BaseFragmentAdapter : FragmentPagerAdapter {
         setFragments(fm, fragmentList, mTitles)
     }
 
-    //刷新fragment
+    //Refresh fragment
     @SuppressLint("CommitTransaction")
     private fun setFragments(fm: FragmentManager, fragments: List<Fragment>, mTitles: List<String>) {
         this.mTitles = mTitles

@@ -6,7 +6,7 @@ import com.kotlin.mirzaadil.mvparchitecture.mvp.model.CategoryDetailModel
 
 
 /**
- * Created by xuhao on 2017/11/30.
+ * @author Mirza Adil
  * desc:
  */
 class CategoryDetailPresenter: BasePresenter<CategoryDetailContract.View>(),CategoryDetailContract.Presenter{
@@ -18,7 +18,7 @@ class CategoryDetailPresenter: BasePresenter<CategoryDetailContract.View>(),Cate
     private var nextPageUrl:String?=null
 
     /**
-     * 获取分类详情的列表信息
+     * Get list information for category details
      */
     override fun getCategoryDetailList(id: Long) {
         checkViewAttached()

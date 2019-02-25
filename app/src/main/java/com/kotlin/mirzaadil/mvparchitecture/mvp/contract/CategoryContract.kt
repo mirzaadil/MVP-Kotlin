@@ -5,26 +5,26 @@ import com.kotlin.mirzaadil.mvparchitecture.base.IPresenter
 import com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean.CategoryBean
 
 /**
- * Created by xuhao on 2017/11/29.
- * desc: 分类 契约类
+ * @author Mirza Adil
+ * desc: Classification contract
  */
 interface CategoryContract {
 
     interface View : IBaseView {
         /**
-         * 显示分类的信息
+         * Display classified information
          */
         fun showCategory(categoryList: ArrayList<CategoryBean>)
 
         /**
-         * 显示错误信息
+         * Display error message
          */
         fun showError(errorMsg:String,errorCode:Int)
     }
 
     interface Presenter: IPresenter<View> {
         /**
-         * 获取分类的信息
+         * Get classified information
          */
         fun getCategoryData()
     }

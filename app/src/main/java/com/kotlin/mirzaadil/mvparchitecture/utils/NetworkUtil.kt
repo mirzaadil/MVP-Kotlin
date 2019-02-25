@@ -12,7 +12,7 @@ import java.net.URL
 
 
 /**
- * Created by xuhao on 2017/11/13.
+ * @author Mirza Adil
  */
 class NetworkUtil{
 
@@ -38,7 +38,7 @@ class NetworkUtil{
         }
 
         /**
-         * 得到ip地址
+         * Get ip address
          *
          * @return
          */

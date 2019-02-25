@@ -12,73 +12,73 @@ import retrofit2.http.Url
 
 /**
  * Created by xuhao on 2017/11/16.
- * Api 接口
+ * Api interface
  */
 
 interface ApiService {
 
     /**
-     * 首页精选
+     * Home selection
      */
     @GET("v2/feed?")
     fun getFirstHomeData(@Query("num") num: Int): Observable<HomeBean>
 
     /**
-     * 根据 nextPageUrl 请求数据下一页数据
+     * Request data next page based on nextPageUrl
      */
     @GET
     fun getMoreHomeData(@Url url: String): Observable<HomeBean>
 
     /**
-     * 根据item id获取相关视频
+     * Get related videos based on item id
      */
     @GET("v4/video/related?")
     fun getRelatedData(@Query("id") id: Long): Observable<HomeBean.Issue>
 
     /**
-     * 获取分类
+     * Get classification
      */
     @GET("v4/categories")
     fun getCategory(): Observable<ArrayList<CategoryBean>>
 
     /**
-     * 获取分类详情List
+     * Get the classification details list
      */
     @GET("v4/categories/videoList?")
     fun getCategoryDetailList(@Query("id") id: Long): Observable<HomeBean.Issue>
 
     /**
-     * 获取更多的 Issue
+     * Get more Issues
      */
     @GET
     fun getIssueData(@Url url: String): Observable<HomeBean.Issue>
 
     /**
-     * 获取全部排行榜的Info（包括，title 和 Url）
+     *Get Info for all leaderboards (including title and Url)
      */
     @GET("v4/rankList")
     fun getRankList(): Observable<TabInfoBean>
 
     /**
-     * 获取搜索信息
+     * Get search information
      */
     @GET("v1/search?&num=10&start=10")
     fun getSearchData(@Query("query") query: String): Observable<HomeBean.Issue>
 
     /**
-     * 热门搜索词
+     * Popular search terms
      */
     @GET("v3/queries/hot")
     fun getHotWord(): Observable<ArrayList<String>>
 
     /**
-     * 关注
+     * attention
      */
     @GET("v4/tabs/follow")
     fun getFollowInfo(): Observable<HomeBean.Issue>
 
     /**
-     * 作者信息
+     * author information
      */
     @GET("v4/pgcs/detail/tab?")
     fun getAuthorInfo(@Query("id") id: Long): Observable<AuthorInfoBean>

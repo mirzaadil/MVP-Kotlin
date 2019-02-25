@@ -57,7 +57,7 @@ abstract class CommonAdapter<T>(
 //        if (mItemClickListener != null) {
 //            holder.itemView.setOnClickListener { mItemClickListener!!.onItemClick(mData[position], position) }
 //        }
-//        //长按点击事件
+//        //Long press on click event
 //        if (mItemLongClickListener != null) {
 //            holder.itemView.setOnLongClickListener { mItemLongClickListener!!.onItemLongClick(mData[position], position) }
 //        }

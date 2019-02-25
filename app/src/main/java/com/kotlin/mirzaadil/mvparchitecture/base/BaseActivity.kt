@@ -24,7 +24,7 @@ import pub.devrel.easypermissions.EasyPermissions
 abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
 
 
-    protected var mLayoutStatusView: MultipleStatusView? = null
+    private var mLayoutStatusView: MultipleStatusView? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

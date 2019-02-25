@@ -2,7 +2,7 @@ package com.kotlin.mirzaadil.mvparchitecture.view.recyclerview.adapter
 
 /**
  *
- * Description: Adapter条目的长按事件
+ * Description: Adapter
  */
 interface OnItemLongClickListener {
 

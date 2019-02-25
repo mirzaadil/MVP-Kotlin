@@ -6,24 +6,24 @@ import com.kotlin.mirzaadil.mvparchitecture.mvp.model.bean.TabInfoBean
 
 
 /**
- * Created by xuhao on 2017/11/30.
- * desc: 契约类
+ * @author Mirza Adil
+ * desc: Contract class
  */
 interface HotTabContract {
 
-    interface View: IBaseView {
+    interface View : IBaseView {
         /**
-         * 设置 TabInfo
+         * Set TabInfo
          */
         fun setTabInfo(tabInfoBean: TabInfoBean)
 
-        fun showError(errorMsg:String,errorCode:Int)
+        fun showError(errorMsg: String, errorCode: Int)
     }
 
 
-    interface Presenter: IPresenter<View> {
+    interface Presenter : IPresenter<View> {
         /**
-         * 获取 TabInfo
+         * get TabInfo
          */
         fun getTabInfo()
     }

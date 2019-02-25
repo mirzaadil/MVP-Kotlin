@@ -7,7 +7,7 @@ import java.io.InputStream
 import java.util.regex.Pattern
 
 /**
- * Created by xuhao on 2017/12/1.
+ * @author Mirza Adil
  * desc:
  */
 
@@ -19,7 +19,7 @@ class CustomBaseGlideUrlLoader(concreteLoader: ModelLoader<GlideUrl, InputStream
      * the URL with the best bucket for the requested width (the bucket immediately
      * larger than the requested width).
      *
-     * 控制加载的图片的大小
+     * Control the size of the loaded image
      */
     override fun getUrl(model: String, width: Int, height: Int, options: Options): String {
         val m = PATTERN.matcher(model)
@@ -43,7 +43,7 @@ class CustomBaseGlideUrlLoader(concreteLoader: ModelLoader<GlideUrl, InputStream
     }
 
     /**
-     * 工厂来构建CustomBaseGlideUrlLoader对象
+     * Factory to build CustomBaseGlideUrlLoader object
      */
     class Factory : ModelLoaderFactory<String, InputStream> {
         override fun build(multiFactory: MultiModelLoaderFactory): ModelLoader<String, InputStream> {
@@ -59,7 +59,7 @@ class CustomBaseGlideUrlLoader(concreteLoader: ModelLoader<GlideUrl, InputStream
 
         private val urlCache = ModelCache<String, GlideUrl>(150)
         /**
-         * Url的匹配规则
+         * Url's matching rules
          */
         private val PATTERN = Pattern.compile("__w-((?:-?\\d+)+)__")
     }

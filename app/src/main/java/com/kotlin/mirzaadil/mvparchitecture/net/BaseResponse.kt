@@ -2,8 +2,8 @@
 
 
 /**
- * Created by xuhao on 2017/11/16.
- * 封装返回的数据
+ * @author Mirza Adil
+ * Encapsulate returned data
  */
 class BaseResponse<T>(val code :Int,
                       val msg:String,

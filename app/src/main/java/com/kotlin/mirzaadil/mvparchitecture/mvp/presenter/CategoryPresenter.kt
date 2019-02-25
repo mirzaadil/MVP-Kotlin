@@ -7,8 +7,8 @@ import com.kotlin.mirzaadil.mvparchitecture.net.exception.ExceptionHandle
 
 
 /**
- * Created by xuhao on 2017/11/29.
- * desc:分类的 Presenter
+ * @author Mirza Adil
+ * desc:Category Presenter
  */
 class CategoryPresenter : BasePresenter<CategoryContract.View>(), CategoryContract.Presenter {
 
@@ -17,7 +17,7 @@ class CategoryPresenter : BasePresenter<CategoryContract.View>(), CategoryContra
     }
 
     /**
-     * 获取分类
+     * Get classification
      */
     override fun getCategoryData() {
         checkViewAttached()
